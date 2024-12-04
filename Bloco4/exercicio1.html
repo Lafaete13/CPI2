@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Triplo</title>
+</head>
+<body>
+    <h1>Calcular o Triplo dos Números</h1>
+    <button onclick="calcularTriplo()">Iniciar</button>
+
+    <script>
+        function calcularTriplo() {
+            let numero;
+
+            do {
+                numero = parseFloat(prompt("Digite um número (ou -999 para sair):"));
+
+                if (numero === -999) {
+                    alert("Programa encerrado.");
+                    break;
+                }
+
+                if (isNaN(numero)) {
+                    alert("Por favor, insira um número válido.");
+                } else {
+                    const triplo = numero * 3;
+                    alert(`O triplo de ${numero} é ${triplo}.`);
+                }
+            } while (numero !== -999);
+        }
+    </script>
+</body>
+</html>

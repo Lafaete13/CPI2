@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado dos Números de 1 a 20</title>
+    
+</head>
+<body>
+    <h1>Quadrado dos Números de 1 a 20</h1>
+    <button onclick="calcularQuadrados()">Calcular Quadrados</button>
+
+    <script>
+        function calcularQuadrados() {
+            var resultado = "";
+
+            for (let i = 1; i <= 20; i++) {
+                let quadrado = i * i;
+                resultado += `O quadrado de ${i} é ${quadrado}\n`;
+            }
+
+            alert(resultado);
+        }
+    </script>
+</body>
+</html>

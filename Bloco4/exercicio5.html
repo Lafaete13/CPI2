@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma de Inteiros de 1 a 10</title>
+</head>
+<body>
+    <h1>Cálculo da Soma de 1 a 10</h1>
+    <button onclick="calcularSoma()">Calcular Soma</button>
+
+    <script>
+        function calcularSoma() {
+            var x = 1;
+            var soma = 0;
+
+            do {
+                soma += x;
+                x++;
+            } while (x <= 11);
+
+            alert(`A soma dos inteiros de 1 a 10 é: ${soma}`);
+        }
+    </script>
+</body>
+</html>
