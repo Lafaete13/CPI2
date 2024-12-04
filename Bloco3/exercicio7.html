@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Intervalo</title>
+    <script>
+        function verificarIntervalo() {
+            const numero = parseInt(document.getElementById("numeroIntervalo").value);
+
+            if (isNaN(numero)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            if (numero >= 100 && numero <= 200) {
+                alert(`O número ${numero} está no intervalo entre 100 e 200.`);
+            } else {
+                alert(`O número ${numero} não está no intervalo entre 100 e 200.`);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Verificar Intervalo [100, 200]</h1>
+    <input type="number" id="numeroIntervalo" placeholder="Digite um número">
+    <button onclick="verificarIntervalo()">Verificar</button>
+</body>
+</html>
