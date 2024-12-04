@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de Números</title>
+    
+</head>
+<body>
+    <h1>Calculadora de Divisão</h1>
+    <button onclick="calcularDivisao()">Calcular</button>
+    <p id="dividendo"></p>
+    <p id="divisor"></p>
+    <p id="quociente"></p>
+    <p id="resto"></p>
+
+    <script>
+        function calcularDivisao() {
+            // Solicita ao usuário o dividendo e o divisor
+            const dividendo = parseInt(prompt("Digite o dividendo:"));
+            const divisor = parseInt(prompt("Digite o divisor:"));
+
+            // Verifica se o divisor é zero
+            if (divisor === 0) {
+                document.getElementById("resultado").innerText = "Erro: Divisão por zero não permitida.";
+                return;
+            }
+
+            // Calcula o quociente e o resto
+            const quociente = Math.floor(dividendo / divisor);
+            const resto = dividendo % divisor;
+
+            // Exibe o resultado no HTML
+            document.getElementById("dividendo").innerText = "Dividendo: " + dividendo;
+            document.getElementById("divisor").innerText = "Divisor: " + divisor;
+            document.getElementById("quociente").innerText = "Quociente: " + quociente;
+            document.getElementById("resto").innerText = "Resto: " + resto;
+        }
+    </script>
+</body>
+</html>

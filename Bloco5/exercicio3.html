@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Tempo</title>
+    
+</head>
+<body>
+    <h1>Calculadora de Tempo</h1>
+    <button onclick="calcularMinutos()">Calcular Minutos</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularMinutos() {
+            // Solicita ao usuário a hora e os minutos
+            const hora = prompt("Digite a hora (formato 24h):");
+            const minuto = prompt("Digite os minutos:");
+
+            // Converte os valores para inteiros
+            const horaInt = parseInt(hora);
+            const minutoInt = parseInt(minuto);
+
+            // Verifica se os valores fornecidos são válidos
+            if (horaInt >= 0 && horaInt <= 23 && minutoInt >= 0 && minutoInt <= 59) {
+                // Calcula o total de minutos desde o início do dia
+                const minutosTotais = (horaInt * 60) + minutoInt;
+
+                // Exibe o resultado no elemento com id "resultado"
+                document.getElementById("resultado").innerText = `Desde o início do dia se passaram ${minutosTotais} minutos.`;
+            } else {
+                document.getElementById("resultado").innerText = "Por favor, insira uma hora e minutos válidos.";
+            }
+        }
+    </script>
+</body>
+</html>
