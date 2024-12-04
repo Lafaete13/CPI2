@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificar Estado</title>
+    <script>
+        function identificarEstado() {
+            const sigla = document.getElementById("estado").value.toUpperCase().trim();
+
+            let mensagem;
+            switch (sigla) {
+                case 'RJ':
+                    mensagem = "Carioca";
+                    break;
+                case 'SP':
+                    mensagem = "Paulista";
+                    break;
+                case 'MG':
+                    mensagem = "Mineiro";
+                    break;
+                default:
+                    mensagem = "Outros estados";
+            }
+
+            alert(mensagem);
+        }
+    </script>
+</head>
+<body>
+    <h1>Identificar Estado</h1>
+    <p>Informe a sigla do seu estado:</p>
+    <input type="text" id="estado" placeholder="Digite a sigla do estado (Ex: RJ)">
+    <button onclick="identificarEstado()">Verificar</button>
+</body>
+</html>
