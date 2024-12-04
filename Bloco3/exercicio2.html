@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Média Final</title>
+    
+</head>
+<body>
+    <h1>Cálculo de Média Final</h1>
+    <p>Informe as notas das três provas:</p>
+    <input type="number" step="0.01" id="prova1" placeholder="Nota da Prova 1 (Peso 2)">
+    <input type="number" step="0.01" id="prova2" placeholder="Nota da Prova 2 (Peso 3)">
+    <input type="number" step="0.01" id="prova3" placeholder="Nota da Prova 3 (Peso 5)">
+    <button onclick="calcularMedia()">Calcular Média</button>
+
+    <script>
+        function calcularMedia() {
+            const prova1 = parseFloat(document.getElementById("prova1").value);
+            const prova2 = parseFloat(document.getElementById("prova2").value);
+            const prova3 = parseFloat(document.getElementById("prova3").value);
+
+            if (isNaN(prova1) || isNaN(prova2) || isNaN(prova3)) {
+                alert("Por favor, insira notas válidas.");
+                return;
+            }
+
+            const media = ((prova1 * 2) + (prova2 * 3) + (prova3 * 5)) / 10;
+
+            if (media >= 7.0) {
+                alert(`Média: ${media.toFixed(2)} - Aprovado!`);
+            } else {
+                alert(`Média: ${media.toFixed(2)} - Reprovado!`);
+            }
+        }
+    </script>
+</body>
+</html>
