@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Sem Retorno de Valor</title>
+    
+</head>
+<body>
+    <h1>Função Sem Retorno de Valor</h1>
+    <p>Confira o console para ver a saída.</p>
+
+    <script>
+        // Função sem retorno de valor, que exibe diretamente a saída
+        function exibirSaida() {
+            const nome1 = prompt("Digite o primeiro nome:");
+            const nome2 = prompt("Digite o segundo nome:");
+
+            // Exibe os nomes e os caracteres de acordo com o formato desejado
+            console.log("*".repeat(15));
+            console.log(nome1.toUpperCase());
+            console.log("=".repeat(15));
+            console.log(nome2.toUpperCase());
+            console.log("#".repeat(15));
+        }
+
+        // Chama a função diretamente
+        exibirSaida();
+    </script>
+</body>
+</html>

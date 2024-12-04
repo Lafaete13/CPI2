@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular Dobro</title>
+    
+</head>
+<body>
+    <h1>Calcular o Dobro</h1>
+    <p>Confira o console para ver a saída.</p>
+
+    <script>
+        // Função que recebe um número e retorna o dobro
+        function calcularDobro(numero) {
+            return numero * 2;
+        }
+
+        // Função para solicitar os números e exibir o dobro
+        function obterENiscreverDobro() {
+            for (let i = 1; i <= 3; i++) {
+                const numero = parseInt(prompt(`Informe um número (${i} de 3):`));
+                const dobro = calcularDobro(numero);
+                console.log(`dobro: ${dobro}`);
+            }
+        }
+
+        // Chama a função diretamente
+        obterENiscreverDobro();
+    </script>
+</body>
+</html>

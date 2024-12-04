@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média</title>
+    
+</head>
+<body>
+    <h1>Cálculo da Média Aritmética</h1>
+    <p>Veja o resultado no console.</p>
+
+    <script>
+        // Função para calcular a média aritmética
+        function calcularMedia(nota1, nota2, nota3) {
+            return (nota1 + nota2 + nota3) / 3;
+        }
+
+        // Função para solicitar as notas e exibir a média
+        function exibirMedia() {
+            // Solicita as notas ao usuário
+            var nota1 = parseFloat(prompt("Digite a nota 1:"));
+            var nota2 = parseFloat(prompt("Digite a nota 2:"));
+            var nota3 = parseFloat(prompt("Digite a nota 3:"));
+
+            // Calcula a média usando a função
+            let media = calcularMedia(nota1, nota2, nota3);
+
+            // Exibe a média formatada no console
+            console.log(`Média aritmética = ${media.toFixed(2)}`);
+        }
+
+        // Chama a função para iniciar o processo
+        exibirMedia();
+    </script>
+</body>
+</html>

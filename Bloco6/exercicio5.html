@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversão de Radianos para Graus</title>
+    
+</head>
+<body>
+    <h1>Conversão de Radianos para Graus</h1>
+    <p>Veja o resultado no alerta.</p>
+
+    <script>
+        // Função que converte radianos para graus
+        function radianosParaGraus(radianos) {
+            var graus = radianos * (180 / Math.PI);
+            return graus;
+        }
+
+        // Função que solicita ao usuário o valor em radianos e exibe o resultado
+        function exibirResultado() {
+            // Solicita ao usuário o valor em radianos
+            let radianos = parseFloat(prompt("Digite o valor em radianos:"));
+
+            // Converte os radianos para graus
+            let graus = radianosParaGraus(radianos);
+
+            // Exibe o resultado com alert
+            alert(`${radianos} radianos é igual a ${graus.toFixed(2)} graus.`);
+        }
+
+        // Chama a função para iniciar a execução
+        exibirResultado();
+    </script>
+</body>
+</html>

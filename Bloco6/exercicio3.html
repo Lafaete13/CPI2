@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobro de Números</title>
+    
+</head>
+<body>
+    <h1>Calculadora de Dobro</h1>
+    <p>Veja o console para os resultados.</p>
+
+    <script>
+        // Função que calcula o dobro do número fornecido
+        function calcularDobro(numero) {
+            return numero * 2;
+        }
+
+        // Função que imprime o caractere e o resultado
+        function imprimirDecoracao(mensagem) {
+            console.log(mensagem);  // Imprime a decoração na tela
+        }
+
+        // Função que solicita o número, calcula o dobro e imprime os resultados
+        function exibirDobro() {
+            // Primeira entrada de número
+            var numero1 = prompt("Informe um número:");
+            numero1 = parseInt(numero1);  // Converte para inteiro
+            imprimirDecoracao("********************");
+            console.log(`Informe um número: ${numero1}`);
+            console.log(`dobro: ${calcularDobro(numero1)}`);
+            imprimirDecoracao("********************");
+
+            // Segunda entrada de número
+            var numero2 = prompt("Informe um número:");
+            numero2 = parseInt(numero2);  // Converte para inteiro
+            imprimirDecoracao("********************");
+            console.log(`Informe um número: ${numero2}`);
+            console.log(`dobro: ${calcularDobro(numero2)}`);
+            imprimirDecoracao("********************");
+
+            // Terceira entrada de número
+            var numero3 = prompt("Informe um número:");
+            numero3 = parseInt(numero3);  // Converte para inteiro
+            imprimirDecoracao("********************");
+            console.log(`Informe um número: ${numero3}`);
+            console.log(`dobro: ${calcularDobro(numero3)}`);
+            imprimirDecoracao("********************");
+        }
+
+        // Chama a função para iniciar a execução
+        exibirDobro();
+    </script>
+</body>
+</html>
