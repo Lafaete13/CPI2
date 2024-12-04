@@ -1,0 +1,42 @@
+<html>		
+	<head>
+		<meta charset="utf-8">
+		<title>Exemplo - Propriedades de Document</title>
+		<style>
+			body { background-color: lightpink; }
+		</style>
+		<script language=javascript>
+			function dataModif()
+			{
+				document.write("<h3>Última ","atualização nesta página: ",document.lastModified, "</h3>");
+			}
+			function mudaCor(cor)
+			{
+				document.body.style.backgroundColor = cor;
+			}
+		</script>
+	</head>
+	<body>
+		<h1 align=center>Utilizando o Objeto Document</h1>
+		<script language =javascript>
+			dataModif();
+		</script>
+		<h2>Mudar a Cor do Fundo</h2>
+		<a href="javascript:mudaCor('white')">Branco</a>
+		<br>
+		<a href="javascript:mudaCor('green')">Verde</a>
+		<br>
+		<a href="javascript:mudaCor('blue')">Azul</a>
+		<br>
+		<a href="javascript:mudaCor('yellow')">Amarelo</a>
+		<br>
+		<a href="javascript:mudaCor('purple')">Roxo</a>
+		<br>
+		<a href="javascript:mudaCor('red')">Vermelho</a>
+		<br>
+		<script language=javascript>
+			if (document.referrer)
+				document.write("<h3>Referenciada por:",document.referrer,"</h3>");
+		</script>
+	</body>
+</html>

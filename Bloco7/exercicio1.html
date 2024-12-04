@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolha um Motor de Busca</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #00ff0d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Escolha o Motor de Busca</h1>
+        <button onclick="window.location.href='https://www.google.com'">Google</button>
+        <button onclick="window.location.href='https://www.bing.com'">Bing</button>
+        <button onclick="window.location.href='https://duckduckgo.com'">DuckDuckGo</button>
+    </div>
+</body>
+</html>
