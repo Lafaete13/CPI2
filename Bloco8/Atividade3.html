@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>União de Vetores</title>
+</head>
+<body>
+    <h2>União de Vetores</h2>
+    <p id="vetor1"></p>
+    <p id="vetor2"></p>
+    <p id="vetorUniao"></p>
+
+    <script>
+        // Função para realizar a união dos vetores
+        function unirVetores() {
+            let vetor1 = [];
+            let vetor2 = [];
+            let vetorUniao = [];
+
+            // Obter os elementos do vetor 1
+            for (let i = 0; i < 5; i++) {
+                let valor1 = parseInt(prompt(`Digite o elemento do vetor 1[${i}]:`));
+                vetor1.push(valor1);
+            }
+
+            // Obter os elementos do vetor 2
+            for (let i = 0; i < 5; i++) {
+                let valor2 = parseInt(prompt(`Digite o elemento do vetor 2[${i}]:`));
+                vetor2.push(valor2);
+            }
+
+            // Fazer a união dos vetores
+            vetorUniao = vetor1.concat(vetor2);
+
+            // Exibir os vetores e a união no HTML
+            document.getElementById("vetor1").innerText = "Vetor 1: " + vetor1.join(", ");
+            document.getElementById("vetor2").innerText = "Vetor 2: " + vetor2.join(", ");
+            document.getElementById("vetorUniao").innerText = "Vetor União: " + vetorUniao.join(", ");
+        }
+
+        // Chamar a função
+        unirVetores();
+    </script>
+</body>
+</html>

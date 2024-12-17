@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor A e B</title>
+</head>
+<body>
+    <h2>Resultado dos Vetores A e B</h2>
+    <p id="resultadoA"></p>
+    <p id="resultadoB"></p>
+
+    <script>
+        // Função para ler e processar os vetores
+        function processarVetores() {
+            let vetorA = [];
+            let vetorB = [];
+
+            // Lendo 10 elementos do vetor A
+            for (let i = 0; i < 10; i++) {
+                let valor = parseInt(prompt(`Digite o valor do elemento ${i + 1} do vetor A:`));
+                vetorA.push(valor);
+
+                // Aplicando a regra de formação para o vetor B
+                if (i % 2 === 0) { // Índice par
+                    vetorB.push(valor * 5);
+                } else { // Índice ímpar
+                    vetorB.push(valor + 5);
+                }
+            }
+
+            // Exibindo os vetores A e B
+            document.getElementById("resultadoA").innerText = "Vetor A: " + vetorA.join(", ");
+            document.getElementById("resultadoB").innerText = "Vetor B: " + vetorB.join(", ");
+        }
+
+        // Chamando a função
+        processarVetores();
+    </script>
+</body>
+</html>

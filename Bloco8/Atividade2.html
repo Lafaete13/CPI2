@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor Soma</title>
+</head>
+<body>
+    <h2>Resultado dos Vetores e Soma</h2>
+    <p id="vetorA"></p>
+    <p id="vetorB"></p>
+    <p id="vetorSoma"></p>
+
+    <script>
+        // Função para obter os vetores e calcular o vetor soma
+        function calcularVetorSoma() {
+            let vetorA = [];
+            let vetorB = [];
+            let vetorSoma = [];
+
+            // Obter os elementos do vetor A
+            for (let i = 0; i < 5; i++) {
+                let valorA = parseInt(prompt(`Digite o elemento do vetor A[${i}]:`));
+                vetorA.push(valorA);
+            }
+
+            // Obter os elementos do vetor B
+            for (let i = 0; i < 5; i++) {
+                let valorB = parseInt(prompt(`Digite o elemento do vetor B[${i}]:`));
+                vetorB.push(valorB);
+            }
+
+            // Calcular o vetor soma
+            for (let i = 0; i < 5; i++) {
+                vetorSoma.push(vetorA[i] + vetorB[i]);
+            }
+
+            // Exibir os vetores A, B e Soma no HTML
+            document.getElementById("vetorA").innerText = "Vetor A: " + vetorA.join(", ");
+            document.getElementById("vetorB").innerText = "Vetor B: " + vetorB.join(", ");
+            document.getElementById("vetorSoma").innerText = "Vetor Soma: " + vetorSoma.map((val, idx) => `soma[${idx}] - ${val}`).join("\n");
+        }
+
+        // Chamar a função
+        calcularVetorSoma();
+    </script>
+</body>
+</html>

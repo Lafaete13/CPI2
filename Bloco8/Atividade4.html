@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformação de Texto</title>
+</head>
+<body>
+    <h2>Transformação de Texto</h2>
+    <p>Digite textos para serem transformados em maiúsculas e minúsculas. Digite <strong>'sair'</strong> para encerrar.</p>
+    <ul id="resultados"></ul>
+
+    <script>
+        function transformarTexto() {
+            let texto;
+            const listaResultados = document.getElementById("resultados");
+
+            do {
+                texto = prompt("Digite um texto (ou 'sair' para encerrar):");
+
+                if (texto && texto.toLowerCase() !== "sair") {
+                    // Transformações
+                    let maiusculas = texto.toUpperCase();
+                    let minusculas = texto.toLowerCase();
+
+                    // Exibir resultados
+                    let item = document.createElement("li");
+                    item.innerText = `Original: ${texto}, Maiúsculas: ${maiusculas}, Minúsculas: ${minusculas}`;
+                    listaResultados.appendChild(item);
+                }
+
+            } while (texto && texto.toLowerCase() !== "sair");
+        }
+
+        // Chamar a função ao carregar a página
+        transformarTexto();
+    </script>
+</body>
+</html>
