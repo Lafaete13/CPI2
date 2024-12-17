@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada Personalizada</title>
+<body>
+    <h1>Gerar Tabuada</h1>
+    <button onclick="mostrarTabuada()">Gerar Tabuada</button>
+
+    <script>
+        function mostrarTabuada() {
+            const numero = parseInt(prompt("Digite o número para gerar a tabuada:"));
+
+            if (isNaN(numero)) {
+                alert("Por favor, insira um número válido.");
+                return;
+            }
+
+            var resultado = "";
+            for (let i = 1; i <= 10; i++) {
+                resultado += `${numero} x ${i} = ${numero * i}\n`;
+            }
+
+            alert(`Tabuada do ${numero}:\n\n${resultado}`);
+        }
+    </script>
+</head>
+</body>
+</html>

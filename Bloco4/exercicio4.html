@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar e Calcular Média</title>
+</head>
+<body>
+    <h1>Somar Números e Calcular Média</h1>
+    <button onclick="calcularSomaEMedia()">Iniciar</button>
+
+    <script>
+        function calcularSomaEMedia() {
+            var soma = 0;
+            var contador = 0;
+            var numero;
+
+            do {
+                numero = parseFloat(prompt("Digite um número (9999 para encerrar):"));
+
+                if (numero !== 9999) {
+                    soma += numero;
+                    contador++;
+                }
+            } while (numero !== 9999);
+
+            if (contador > 0) {
+                const media = soma / contador;
+                alert(`Soma dos números: ${soma}\nMédia: ${media.toFixed(2)}`);
+            } else {
+                alert("Nenhum número foi inserido.");
+            }
+        }
+    </script>
+</body>
+</html>

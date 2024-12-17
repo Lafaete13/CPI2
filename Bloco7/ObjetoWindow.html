@@ -1,0 +1,51 @@
+<HTML>
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Exemplo de Hierarquia</TITLE>
+	</HEAD>
+	<BODY bgcolor=white>
+		<IMG SRC="hello.jpg" width=10% heigth=10%>
+		<FORM>
+			<TABLE>
+				<TR>
+					<TD>Nome:</TD>
+					<TD><INPUT TYPE=TEXT NAME="nome" SIZE=40 VALUE="Fulano Sicrano"></TD>
+				</TR>
+				<TR>
+					<TD>E-mail:</TD>
+					<TD><INPUT TYPE=TEXT SIZE=40 VALUE="fulano@qualquer.coisa.br"></TD>
+				</TR>
+				<TR>
+					<TD>Href do link:</TD>
+					<TD><INPUT TYPE=TEXT SIZE=40></TD>
+				</TR>
+				<TR>
+					<TD>Src da imagem:</TD>
+					<TD><INPUT TYPE=TEXT SIZE=40></TD>
+				</TR>
+			</TABLE>
+			<BR>
+			<INPUT TYPE=BUTTON Name=botao Value="Pressione">
+		</FORM>
+		<IMG SRC="linha.png" width=50%>
+		<P><A HREF="http://www.ifb.edu.br">Outros links</A></P>
+		<SCRIPT LANGUAGE="javascript">
+			// Criando variáveis para os elementos e objetos
+			var form = document.forms[0];
+			var link = document.links[0];
+			var image = document.images[0];
+			var botao = form.elements[4];
+
+			// Atribuindo valores aos campos de texto
+			form.elements[2].value = link.href;
+			form.elements[3].value = image.src;
+
+			// Exibindo o nome no console
+			document.write("O nome que aparece no campo nome do formulario é " + form.elements[0].value);
+
+			// Prompt para texto do botão
+			var texto = prompt("Qual texto deve aparecer no botao ?");
+			botao.value = texto;
+		</SCRIPT>
+	</BODY>
+</HTML>

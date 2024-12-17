@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Condicional</title>
+    <script>
+        function calcularSoma() {
+            const numero1 = parseFloat(document.getElementById("numero1").value);
+            const numero2 = parseFloat(document.getElementById("numero2").value);
+
+            if (isNaN(numero1) || isNaN(numero2)) {
+                alert("Por favor, insira números válidos.");
+                return;
+            }
+
+            let soma = numero1 + numero2;
+
+            if (soma > 20) {
+                soma += 8;
+            } else {
+                soma -= 5;
+            }
+
+            alert(`O resultado final é: ${soma}`);
+        }
+    </script>
+</head>
+<body>
+    <h1>Calculadora Condicional</h1>
+    <p>Informe dois números:</p>
+    <input type="number" id="numero1" placeholder="Digite o primeiro número">
+    <input type="number" id="numero2" placeholder="Digite o segundo número">
+    <button onclick="calcularSoma()">Calcular</button>
+</body>
+</html>

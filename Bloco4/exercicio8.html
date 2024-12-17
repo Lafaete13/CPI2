@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros de 1 a 100 e seu Somatório</title>
+    
+</head>
+<body>
+    <h1>Exibir Números e Somatório</h1>
+    <button onclick="calcularSomatorio()">Calcular e Exibir</button>
+
+    <script>
+        function calcularSomatorio() {
+            var soma = 0;
+            var numeros = "";
+
+            for (let i = 1; i <= 100; i++) {
+                numeros += i + (i < 100 ? " + " : "");
+                soma += i;
+            }
+
+            alert(`Números de 1 a 100: \n${numeros}\n\nSomatório: ${soma}`);
+        }
+    </script>
+</body>
+</html>

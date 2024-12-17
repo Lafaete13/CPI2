@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo da Média</title>
+</head>
+<body>
+    <h1>Calcular a Média de Números Positivos</h1>
+    <button onclick="calcularMedia()">Iniciar</button>
+
+    <script>
+        function calcularMedia() {
+            var soma = 0;
+            var contador = 0;
+            var numero;
+
+            do {
+                numero = parseFloat(prompt("Digite um número positivo (ou um número negativo para sair):"));
+
+                if (numero >= 0) {
+                    soma += numero;
+                    contador++;
+                }
+            } while (numero >= 0);
+
+            if (contador > 0) {
+                const media = soma / contador;
+                alert(`A média dos números digitados é ${media.toFixed(2)}.`);
+            } else {
+                alert("Nenhum número positivo foi digitado.");
+            }
+        }
+    </script>
+</body>
+</html>
