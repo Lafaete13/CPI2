@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exemplo de radio com addEventListener</title>
+    <style type="text/css">
+        body {
+            background-color: lightsteelblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de radio</h1>
+    <form name="form1">
+        <table>
+            <tr>
+                <th align="left">&Uacute;ltimo nome:</th>
+                <td>
+                    <input type="text" name="lastname">
+                </td>
+            </tr>
+            <tr>
+                <th align="left">Primeiro nome:</th>
+                <td>
+                    <input type="text" name="firstname">
+                </td>
+            </tr>
+        </table>
+        <p>
+            <b>Valores convertidos para:</b>
+            <br>
+            <input type="radio" name="conversion" value="upper" id="upper">Mai&uacute;sculas
+            <input type="radio" name="conversion" value="lower" id="lower">Min&uacute;sculas
+        </p>
+    </form>
+
+    <script src="radio.js"></script>
+</body>
+</html>

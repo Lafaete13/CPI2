@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crítica de Campo</title>
+    <style>
+        body {
+            background-color: navy; 
+            color: yellow;
+        }
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Crítica de Campo</h2>
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome" id="campo-nome"></td>
+            </tr>
+            <tr>
+                <td>Telefone:</td>
+                <td>
+                    <input type="text" name="telefone" id="campo-telefone">
+                    <span id="erro"></span>
+                </td>
+            </tr>
+        </table>
+        <p>
+            <input type="button" value="Enviar">
+            <input type="reset" value="Apagar">
+        </p>
+    </form>
+    <script src="camposTexto.js"></script>
+</body>
+</html>
